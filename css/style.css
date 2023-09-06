@@ -1,0 +1,466 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* remove o contorno (outline)  */
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+  background: #ffffff;
+}
+
+/*  #########################  HEADER #########################  */
+
+.youtube-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*  #########################  HEADER ESQUERDO #########################  */
+
+.header-esq {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.menu-sanduiche {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  cursor: pointer;
+  position: relative;
+  /* Para que o pseudo-elemento seja posicionado em relação a este elemento */
+}
+
+.menu-sanduiche::before {
+  content: "";
+  /* Adiciona um conteúdo vazio para o pseudo-elemento */
+  position: absolute;
+  /* Posiciona o pseudo-elemento */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  /* Define o raio para tornar o pseudo-elemento redondo */
+  background-color: transparent;
+  /* Define a cor de fundo inicial como transparente */
+  transition: background-color 0.3s;
+  /* Adiciona uma transição suave para a mudança de cor de fundo */
+  z-index: -1;
+  /* Coloca o pseudo-elemento atrás do ícone */
+}
+
+.menu-sanduiche:hover::before {
+  background-color: #e6e6e6;
+  /* Altera a cor de fundo do pseudo-elemento para cinza quando o mouse passa por cima */
+}
+
+.sanduiche-svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+  fill: #000;
+  /* Define a cor de preenchimento inicial como preto */
+}
+
+.menu-sanduiche:hover .sanduiche-svg {
+  fill: #ff0000;
+  /* Altera a cor do preenchimento para vermelho quando o mouse passa por cima do ícone */
+}
+
+.youtube-logo {
+  display: flex;
+  padding: 18px 14px 18px 16px;
+}
+
+.youtube-logo-svg {
+  height: 20px;
+  width: 90px;
+  cursor: pointer;
+}
+
+#language-logo {
+  color: #606060;
+  margin: -24px 0 0 -10px;
+}
+
+
+/*  #########################  HEADER CENTRO #########################  */
+
+.header-centro {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  transition: width 0.3s;
+  /* Adiciona transição para a largura do input */
+  position: relative;
+  /* Adicione posição relativa para posicionamento do ícone */
+}
+
+.input-container:focus-within {
+  width: 500px;
+  /* Largura do input ao receber foco */
+}
+
+.search-input {
+  display: block;
+  border: 1px solid #dbdbdb;
+  border-radius: 40px 0 0 40px;
+  width: 100%;
+  height: 40px;
+  padding-left: 20px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  z-index: 1;
+  outline: none;
+  /* Remove a borda padrão do input quando ele está em foco */
+  position: relative;
+  /* Adicione posição relativa ao input */
+}
+
+/* Pseudo-elemento para criar a borda esquerda que aumenta */
+.search-input:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-left: 1px solid #dbdbdb;
+  /* Cor da borda esquerda */
+  transition: width 0.3s;
+  /* Adiciona transição para o aumento da borda */
+  z-index: 2;
+}
+
+.input-container:focus-within .search-input:before {
+  width: 40px;
+  /* Largura da borda esquerda quando o input está em foco */
+}
+
+.search-input:focus {
+  padding-left: 40px;
+  border-color: #0070f3;
+  /* Altera a cor da borda quando o input está em foco */
+}
+
+.lupa-pesquisa {
+  fill: #888;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  transition: fill 0.3s, left 0.3s;
+  z-index: 3;
+  /* Aumente o z-index para que a lupa-pesquisa esteja acima da borda esquerda */
+  pointer-events: none;
+  /* Evita que o ícone seja clicável */
+  opacity: 0;
+  /* Começa com opacidade zero para escondê-lo */
+}
+
+.input-container:focus-within .lupa-pesquisa {
+  left: 15px;
+  /* Posiciona o ícone à esquerda quando o input está em foco */
+  opacity: 1;
+  /* Torna o ícone visível quando o input está em foco */
+}
+
+#teclado {
+  display: flex;
+  cursor: pointer;
+  position: absolute;
+  align-self: center;
+  right: 10px;
+  /* Posiciona o ícone à direita, ao lado do input */
+  z-index: 4;
+}
+
+#teclado:hover img {
+  filter: brightness(70%);
+  transition: filter 0.3s;
+}
+
+/* Aplicar hover a todos os elementos SVG, exceto aqueles com a classe .youtube-logo-svg */
+svg:not(.youtube-logo-svg):hover {
+  fill: #ff0000;
+  /* Estilos de hover para outros elementos SVG */
+}
+
+.search-btn:hover svg.lupa {
+  fill: #ff0000;
+  /* Altera a cor do preenchimento para vermelho quando o mouse passa por cima da lupa */
+}
+
+.search-btn {
+  background: hsl(0, 0%, 97%);
+  border: 1px solid #cccccc;
+  border-radius: 0 40px 40px 0;
+  cursor: pointer;
+  height: 40px;
+  width: 60px;
+  padding: 1px 12px;
+}
+
+svg.lupa {
+  display: block;
+  padding: 0 7px;
+  width: 100%;
+  height: 100%;
+}
+
+button.microfone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 12px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+
+  border-radius: 100px;
+  border: #ccc;
+  background-color: #f0f0f0;
+}
+
+.microfone:hover, .search-btn:hover {
+  background-color: #e6e6e6;
+}
+
+/*  #########################  HEADER DIREITO #########################  */
+
+.header-direito {
+  margin-right: 20px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header-direito .icon {
+  margin-right: 20px;
+}
+
+.user {
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.user img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* ########################## SIDEBAR ########################## */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 240px;
+}
+
+.links {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 15px;
+  width: calc(100% - 15px); /* menos 15px da margem left */
+
+  padding: 5px 0 5px 10px;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+svg.sidebar-svg {
+  width: 24px;
+  height: 24px;
+}
+
+.links:hover,
+.links.active {
+  background: hsl(0, 0%, 93.3%);
+  border-radius: 10px;
+  width: 220px;
+}
+
+.seperator {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.links p, p {
+  font-size: 14px;
+  line-height: 2rem;
+  font-weight: 400;
+  color: #0F0F0F;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-left: 20px;
+  max-width: calc(100% - 100px);
+  /* largura máxima para o texto */
+
+}
+
+
+/* ########################## FILTROS ABAIXO DO HEADER ########################## */
+
+.filtros {
+  position: fixed;
+  top: 60px; /* Altura do header */
+  left: 240px; /* largura do sidebar */
+  width: calc(100% - 240px);
+  height: 60px;
+  background: #fff;
+  padding: 20px 15px 60px 15px;
+  display:flex;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.filter-options {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  height: 32px;
+  min-width: 12px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 0px;
+  /* outline: none; */
+  user-select: none;
+  overflow: hidden;
+  margin-right: 20px;
+  color: #0F0F0F;
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  /* Adiciona uma transição suave para hover */
+}
+
+.filter-options.active {
+  color: #fff;
+  background: #242424;
+}
+
+.filter-options:hover {
+  background: #e6e6e6;
+  /* Altera a cor de fundo quando o mouse passa por cima */
+  color: #000;
+  /* Altera a cor do texto quando o mouse passa por cima */
+}
+
+/* ########################## VÍDEOS ########################## */
+
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 150px;  /* 60px (altura do header) + 60px (altura do filtro) + padding do filtro */
+  margin-left: 240px;
+  flex: 1;
+  width: calc(100% - 240px);
+}
+
+.video {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  max-width: 330px;
+  padding: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+
+}
+
+.thumbnail{
+  height: auto;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.video-detalhes {
+  display: flex;
+  flex-direction: row;
+}
+
+.icone-canal {
+  border-radius: 200px;
+  height: 36px;
+  margin-top: 12px;
+}
+
+.info-video {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.titulo-video {
+  font-size: 16px;
+  font-weight: 500;
+  color: #0F0F0F;
+  margin: 12px 0 0 10px;
+}
+
+p.nome-canal, p.video-views {
+  font-size: 14px;
+  font-weight: 400;
+  color: #606060;
+  margin-left: 10px;
+  margin-top: -8px; 
+}

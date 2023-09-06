@@ -263,15 +263,31 @@ button.microfone {
 /*  #########################  HEADER DIREITO #########################  */
 
 .header-direito {
-  margin-right: 20px;
-  margin-left: 20px;
+  margin-right: 30px;
   display: flex;
   align-items: center;
   cursor: pointer;
 }
 
-.header-direito .icon {
-  margin-right: 20px;
+svg.icon {
+  width: 24px;
+  height: 24px;
+  fill: currentcolor;
+}
+
+.icon-dir {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 12px; 
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 100px;
+}
+
+.icon-dir:hover {
+  background-color: #e6e6e6; /* Altera a cor de fundo no hover */
 }
 
 .user {
@@ -280,7 +296,6 @@ button.microfone {
   width: 30px;
   border-radius: 50%;
   overflow: hidden;
-  margin-right: 20px;
 }
 
 .user img {
@@ -288,7 +303,6 @@ button.microfone {
   height: 100%;
   object-fit: cover;
 }
-
 
 /* ########################## SIDEBAR ########################## */
 
@@ -353,7 +367,7 @@ svg.sidebar-svg {
 
 /* Estilizando o hover para <p> */
 .links:hover {
-  color: #FF0000; 
+  color: #FF0000;
 }
 
 
@@ -361,13 +375,15 @@ svg.sidebar-svg {
 
 .filtros {
   position: fixed;
-  top: 60px; /* Altura do header */
-  left: 240px; /* largura do sidebar */
+  top: 60px;
+  /* Altura do header */
+  left: 240px;
+  /* largura do sidebar */
   width: calc(100% - 240px);
   height: 60px;
   background: #fff;
   padding: 10px 15px 60px 15px;
-  display:flex;
+  display: flex;
   align-items: center;
   overflow-x: auto;
   overflow-y: hidden;
@@ -416,7 +432,8 @@ svg.sidebar-svg {
 .video-container {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 150px;  /* 60px (altura do header) + 60px (altura do filtro) + padding do filtro */
+  margin-top: 150px;
+  /* 60px (altura do header) + 60px (altura do filtro) + padding do filtro */
   margin-left: 240px;
   flex: 1;
   width: calc(100% - 240px);
@@ -432,7 +449,7 @@ svg.sidebar-svg {
   margin-bottom: 20px;
 }
 
-.thumbnail{
+.thumbnail {
   height: auto;
   width: 100%;
   border-radius: 15px;
@@ -468,5 +485,5 @@ p.nome-canal, p.video-views {
   font-weight: 400;
   color: #606060;
   margin-left: 10px;
-  margin-top: -8px; 
+  margin-top: -8px;
 }

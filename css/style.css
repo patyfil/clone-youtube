@@ -360,7 +360,7 @@ svg.sidebar-svg {
   width: calc(100% - 240px);
   height: 60px;
   background: #fff;
-  padding: 20px 15px 60px 15px;
+  padding: 10px 15px 60px 15px;
   display:flex;
   align-items: center;
   overflow-x: auto;

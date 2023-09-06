@@ -299,6 +299,8 @@ button.microfone {
   top: 70px;
   left: 0;
   width: 240px;
+  padding: 12px;
+
 }
 
 .links {
@@ -306,10 +308,10 @@ button.microfone {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: 15px;
-  width: calc(100% - 15px); /* menos 15px da margem left */
 
-  padding: 5px 0 5px 10px;
+  padding: 0 12px;
+  width: 204px;
+  height: 40px;
 }
 
 .sidebar a {
@@ -327,13 +329,13 @@ svg.sidebar-svg {
 .links.active {
   background: hsl(0, 0%, 93.3%);
   border-radius: 10px;
-  width: 220px;
 }
 
 .seperator {
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin: 20px 0;
+  width: 100%;
 }
 
 .links p, p {
@@ -345,9 +347,13 @@ svg.sidebar-svg {
   white-space: nowrap;
   text-overflow: ellipsis;
   margin-left: 20px;
-  max-width: calc(100% - 100px);
-  /* largura máxima para o texto */
+  flex: 1;
+  flex-basis: 1e-9px;
+}
 
+/* Estilizando o hover para <p> */
+.links:hover {
+  color: #FF0000; 
 }
 
 
@@ -424,7 +430,6 @@ svg.sidebar-svg {
   padding: 5px;
   cursor: pointer;
   margin-bottom: 20px;
-
 }
 
 .thumbnail{
@@ -436,6 +441,7 @@ svg.sidebar-svg {
 .video-detalhes {
   display: flex;
   flex-direction: row;
+  height: 80px;
 }
 
 .icone-canal {

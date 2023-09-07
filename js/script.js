@@ -4,6 +4,9 @@ var videoAreas = document.querySelectorAll(".video-container");
 var filtros = document.querySelectorAll(".filtros");
 var inscricoes = document.querySelectorAll(".inscricoes");
 var explorar = document.querySelectorAll(".explorar");
+var maisYT = document.querySelectorAll(".mais-youtube");
+var config = document.querySelectorAll(".configuracoes");
+var final = document.querySelectorAll(".final");
 var linhas = document.querySelectorAll(".linha");
 var videos = document.querySelectorAll(".video");
 
@@ -23,6 +26,15 @@ sanduiche.onclick = function() {
   });
   explorar.forEach(function(itemExplorar) {
     itemExplorar.classList.toggle("esconde-explorar");
+  });
+  maisYT.forEach(function(itemMaisYT) {
+    itemMaisYT.classList.toggle("esconde-mais-youtube");
+  });
+  config.forEach(function(itemConfig) {
+    itemConfig.classList.toggle("esconde-configuracoes");
+  });
+  final.forEach(function(itemFinal) {
+    itemFinal.classList.toggle("esconde-final");
   });
   linhas.forEach(function(linha) {
     linha.classList.toggle("esconde-linha");

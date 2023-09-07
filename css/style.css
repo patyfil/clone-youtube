@@ -282,9 +282,11 @@ svg.icon {
   left: 0;
   width: 240px;
   padding: 12px;
-  max-height: calc(100vh - 80px); 
+  max-height: calc(100vh - 60px); /* Subtrai a altura do topo para ajustar à altura da janela */
   overflow-y: auto; /* Adiciona uma barra de rolagem quando necessário */
 }
+
+
 
 /* ESCONDER A BARRA DE ROLAGEM QUANDO NÃO ESTIVER COM O MOUSE NO SIDEBAR */
 
@@ -330,6 +332,8 @@ svg.sidebar-svg {
 
 .links:hover,
 .links.active, 
+.mais-youtube a:hover,
+.configuracoes a:hover,
 .inscricoes a:hover, 
 .explorar a:hover {
   background: hsl(0, 0%, 93.3%);
@@ -356,7 +360,10 @@ svg.sidebar-svg {
   flex-basis: 1e-9px;
 }
 
-.inscricoes h3, .explorar h3, .mais-youtube h3, .configuracoes h3 {
+.inscricoes h3, 
+.explorar h3, 
+.mais-youtube h3, 
+.configuracoes h3 {
   display: block;
   padding: 0 0 15px 12px;
   font-size: 16px;
@@ -378,6 +385,28 @@ svg.sidebar-svg {
   height: 40px;
 
   text-decoration: none;
+}
+
+.final {
+  font-size: 13px;
+  font-weight: 500;
+  margin-left: 8px;
+  margin-bottom: 20px;
+}
+
+.final a {
+  text-decoration: none;
+  color: #606060;
+  display: inline-block;
+  margin-right: 10px; /* Espaço entre as palavras */
+}
+
+.final a:last-child {
+  margin-right: 0; /* Remova a margem direita da última palavra */
+}
+
+.final a:hover {
+  text-decoration: underline;
 }
 
 
@@ -516,9 +545,13 @@ p.nome-canal, p.video-views {
 
 .esconde-inscricoes, 
 .esconde-explorar, 
+.esconde-mais-youtube,
+.esconde-config,
+.esconde-final,
 .esconde-linha  {
   display: none;
 }
+
 .aumenta-video-container {
   display: flex;
   flex-wrap: wrap;

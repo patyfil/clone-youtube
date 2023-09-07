@@ -282,7 +282,6 @@ svg.icon {
   left: 0;
   width: 240px;
   padding: 12px;
-
 }
 
 .links {
@@ -292,7 +291,7 @@ svg.icon {
   align-items: center;
 
   padding: 0 12px;
-  width: 204px;
+  /* width: 204px; */
   height: 40px;
 }
 
@@ -308,12 +307,14 @@ svg.sidebar-svg {
 }
 
 .links:hover,
-.links.active {
+.links.active, 
+.inscricoes a:hover, 
+.explorar a:hover {
   background: hsl(0, 0%, 93.3%);
   border-radius: 10px;
 }
 
-.seperator {
+.linha {
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin: 20px 0;
@@ -333,6 +334,31 @@ svg.sidebar-svg {
   flex-basis: 1e-9px;
 }
 
+.inscricoes h3, .explorar h3, .mais-youtube h3, .configuracoes h3 {
+  display: block;
+  padding: 0 0 15px 12px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #0F0F0F;
+}
+
+.inscricoes, .explorar, .mais-youtube, .configuracoes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.inscricoes a, .explorar a, .mais-youtube a, .configuracoes a {
+  padding-left: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 204px;
+  height: 40px;
+
+  text-decoration: none;
+}
+
+
 /* ########################## FILTROS ABAIXO DO HEADER ########################## */
 
 .filtros {
@@ -344,7 +370,7 @@ svg.sidebar-svg {
   width: calc(100% - 240px);
   height: 60px;
   background: #fff;
-  padding: 10px 15px 60px 15px;
+  padding: 10px 15px 60px 5px;
   display: flex;
   align-items: center;
   overflow-x: auto;
@@ -395,7 +421,8 @@ svg.sidebar-svg {
   flex-wrap: wrap;
   margin-top: 130px;
   /* 60px (altura do header) + 60px (altura do filtro) + padding do filtro 10px */
-  margin-left: 240px; /* tamanho do sidebar */
+  margin-left: 240px;
+  /* tamanho do sidebar */
   flex: 1;
   width: calc(100% - 240px);
 }
@@ -447,4 +474,54 @@ p.nome-canal, p.video-views {
   color: #606060;
   margin-left: 10px;
   margin-top: -4px;
+}
+
+/* ####################### MENU SANDUICHE ####################### */
+
+.small-sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 70px;
+  padding: 12px;
+}
+
+.small-sidebar a p  {
+  display: none;
+}
+
+.esconde-inscricoes, 
+.esconde-explorar, 
+.esconde-linha  {
+  display: none;
+}
+.aumenta-video-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 130px;
+  /* 60px (altura do header) + 60px (altura do filtro) + padding do filtro 10px */
+  margin-left: 100px;
+  /* tamanho do sidebar */
+  flex: 1;
+  width: calc(100% - 100px);
+}
+
+.small-filtros {
+  position: fixed;
+  top: 60px;
+  /* Altura do header */
+  left: 100px;
+  /* largura do sidebar */
+  width: calc(100% - 100px);
+  height: 60px;
+  background: #fff;
+  padding: 10px 15px 60px 5px;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: inline-block;
+  white-space: nowrap;
 }

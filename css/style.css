@@ -525,3 +525,14 @@ p.nome-canal, p.video-views {
   display: inline-block;
   white-space: nowrap;
 }
+
+.aumenta-video {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  /* width: 360px; */
+  max-width: 350px;
+  padding: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}

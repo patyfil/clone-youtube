@@ -282,7 +282,29 @@ svg.icon {
   left: 0;
   width: 240px;
   padding: 12px;
+  max-height: calc(100vh - 80px); 
+  overflow-y: auto; /* Adiciona uma barra de rolagem quando necessário */
 }
+
+/* ESCONDER A BARRA DE ROLAGEM QUANDO NÃO ESTIVER COM O MOUSE NO SIDEBAR */
+
+/* Estilo padrão para a barra de rolagem */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Estilo da alça da barra de rolagem */
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #888; /* Cor da alça da barra de rolagem */
+  border-radius: 4px; /* Cantos arredondados para a alça */
+}
+
+/* Quando o mouse não está sobre o sidebar, esconda a barra de rolagem */
+.sidebar:not(:hover)::-webkit-scrollbar {
+  width: 0;
+}
+
+/* FIM DA BARRA DE ROLAGEM */
 
 .links {
   text-decoration: none;
@@ -530,8 +552,7 @@ p.nome-canal, p.video-views {
   display: flex;
   flex-direction: column;
   height: auto;
-  /* width: 360px; */
-  max-width: 350px;
+  max-width: 360px;
   padding: 5px;
   cursor: pointer;
   margin-bottom: 20px;

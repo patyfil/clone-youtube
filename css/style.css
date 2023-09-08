@@ -470,9 +470,9 @@ svg.sidebar-svg {
 
 .video-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
-  margin-top: 130px;
+  margin-top: 140px;
   /* 60px (altura do header) + 60px (altura do filtro) + padding do filtro 10px */
   margin-left: 240px;
   /* tamanho do sidebar */
@@ -545,18 +545,22 @@ p.nome-canal, p.video-views {
   display: none;
 }
 
+.esconde-outros-icones {
+  display: none;
+}
+
 .esconde-inscricoes, 
 .esconde-explorar, 
 .esconde-mais-youtube,
-.esconde-config,
+.esconde-configuracoes,
 .esconde-final,
-.esconde-linha  {
+.esconde-linha {
   display: none;
 }
 
 .aumenta-video-container {
-  display: flex;
-  flex-wrap: wrap;
+  /* flex-grow: 1; */
+
   margin-top: 130px;
   /* 60px (altura do header) + 60px (altura do filtro) + padding do filtro 10px */
   margin-left: 100px;
@@ -584,8 +588,9 @@ p.nome-canal, p.video-views {
 }
 
 .aumenta-video {
-  display: flex;
-  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+
   height: auto;
   max-width: 360px;
   padding: 5px;

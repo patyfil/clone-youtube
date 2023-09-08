@@ -1,9 +1,13 @@
 /* Dispositivo = Tablets, Ipads (retrato)
      Tela = 768px a 1024px */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
   /* Reduzir o tamanho do input de pesquisa */
   .input-container {
     width: 250px;
+  }
+
+  .esconde-outros-icones {
+    display: none;
   }
 
   .video {
@@ -12,7 +16,7 @@
 }
 
 @media (max-width: 767px) {
-  .menu-sanduiche, 
+  .menu-sanduiche,
   .header-centro, 
   .links p, 
   .inscricoes, 
@@ -20,6 +24,7 @@
   .mais-youtube, 
   .configuracoes, 
   .final, 
+  .outros-icones,
   hr {
     display: none;
   }
@@ -33,11 +38,24 @@
     margin-left: 70px;
     left: 0;
   }
+
+  .video {
+    max-width: 90%;
+  }
 }
 
 @media (max-width: 480px) {
   .sidebar {
-    display: none;
+    background-color: white;
+    flex-direction: row;
+    justify-content: space-around;
+    bottom: 0;
+    top: auto;
+    padding: 0;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    overflow-x: auto; 
   }
 
   .filtros{
@@ -45,7 +63,6 @@
     margin: 0;
     padding-left: 10px;
     padding-right: 10px;
-
   }
 
   .video-container {
@@ -55,7 +72,5 @@
     margin: 0;
   }
 
-  .video {
-    max-width: 90%;
-  }
+
 }

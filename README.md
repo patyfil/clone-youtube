@@ -30,8 +30,11 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 🔖 Layout
 
 <p align="center">
-  <img alt="print desktop do projeto" src="./img/desktop.png" width="100%">
+  <img alt="print desktop do projeto" src="./img/desktop.jpg" width="100%">
   <img alt="print mobile do projeto" src="./img/mobile.jpg" width="100%">
+
+  <img alt="print da barra de pesquisa selecionada" src="./img/lupa-esq.jpg" width="50%">
+  <img alt="print do tooltip" src="./img/tooltip.jpg" width="50%">
 </p>
 
 

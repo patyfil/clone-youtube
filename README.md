@@ -30,7 +30,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 🔖 Layout
 
 <p align="center">
-  <img alt="projeto clone youtube" src="./img/Youtube-Clone.png" width="100%">
+  <img alt="print desktop do projeto" src="./img/desktop.png" width="100%">
+  <img alt="print mobile do projeto" src="./img/mobile.jpg" width="100%">
 </p>
 
 

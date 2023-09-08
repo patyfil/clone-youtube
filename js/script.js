@@ -13,36 +13,36 @@ var videos = document.querySelectorAll(".video");
 
 var outrosIcones = document.querySelector(".outros-icones");
 
-sanduiche.onclick = function() {
+sanduiche.onclick = function () {
   // Itera sobre todos os elementos encontrados com a classe e aplica as alterações
-  sidebars.forEach(function(sidebar) {
+  sidebars.forEach(function (sidebar) {
     sidebar.classList.toggle("small-sidebar");
   });
-  videoAreas.forEach(function(videoArea) {
+  videoAreas.forEach(function (videoArea) {
     videoArea.classList.toggle("aumenta-video-container");
   });
-  filtros.forEach(function(filtro) {
+  filtros.forEach(function (filtro) {
     filtro.classList.toggle("small-filtros");
   });
-  inscricoes.forEach(function(inscricao) {
+  inscricoes.forEach(function (inscricao) {
     inscricao.classList.toggle("esconde-inscricoes");
   });
-  explorar.forEach(function(itemExplorar) {
+  explorar.forEach(function (itemExplorar) {
     itemExplorar.classList.toggle("esconde-explorar");
   });
-  maisYT.forEach(function(itemMaisYT) {
+  maisYT.forEach(function (itemMaisYT) {
     itemMaisYT.classList.toggle("esconde-mais-youtube");
   });
-  config.forEach(function(itemConfig) {
+  config.forEach(function (itemConfig) {
     itemConfig.classList.toggle("esconde-configuracoes");
   });
-  final.forEach(function(itemFinal) {
+  final.forEach(function (itemFinal) {
     itemFinal.classList.toggle("esconde-final");
   });
-  linhas.forEach(function(linha) {
+  linhas.forEach(function (linha) {
     linha.classList.toggle("esconde-linha");
   });
-  videos.forEach(function(video) {
+  videos.forEach(function (video) {
     video.classList.toggle("aumenta-video");
   });
   outrosIcones.classList.toggle("esconde-outros-icones");

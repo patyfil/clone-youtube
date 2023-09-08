@@ -29,7 +29,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 🔖 Layout
 
-<p align="center">
+<div align="center">
 <p align="center"> desktop </p>
   <img alt="print desktop do projeto" src="./img/desktop.jpg" width="100%">
   <p align="center"> Mobile </p>
@@ -40,7 +40,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
   <br>  
   <p align="center"> Detalhe do Tooltip </p>  
   <img align="center" alt="print do tooltip" src="./img/tooltip.jpg" width="50%">
-</p>
+</div>
 
 
 ## :memo: Licença

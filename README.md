@@ -30,13 +30,15 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 🔖 Layout
 
 <p align="center">
+<p align="center"> desktop </p>
   <img alt="print desktop do projeto" src="./img/desktop.jpg" width="100%">
+  <p align="center"> Mobile </p>
   <img alt="print mobile do projeto" src="./img/mobile.jpg" width="30%">
 
-  <p> Barra de pesquisa selecionada </p>  
+  <p align="center"> Barra de pesquisa selecionada </p>  
   <img alt="print da barra de pesquisa selecionada" src="./img/lupa-esq.jpg" width="50%">  
   <br>  
-  <p> Detalhe do Tooltip </p>  
+  <p align="center"> Detalhe do Tooltip </p>  
   <img alt="print do tooltip" src="./img/tooltip.jpg" width="50%">
 </p>
 

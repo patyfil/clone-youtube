@@ -1,0 +1,51 @@
+/* Dispositivo = Tablets, Ipads (retrato)
+     Tela = 768px a 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Reduzir o tamanho do input de pesquisa */
+  .input-container {
+    width: 250px;
+  }
+
+  .video {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-sanduiche, 
+  .header-centro, 
+  .links p, 
+  .inscricoes, 
+  .explorar, 
+  .mais-youtube, 
+  .configuracoes, 
+  .final, 
+  hr {
+    display: none;
+  }
+
+  .sidebar {
+    width: 70px;
+  }
+
+  .video-container, .filtros{
+    width: calc(100% - 70px);
+    margin-left: 70px;
+    left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    display: none;
+  }
+
+  .video-container, .filtros{
+    width: 100%;
+    margin-left: 5px;
+  }
+
+  .video {
+    max-width: 90%;
+  }
+}

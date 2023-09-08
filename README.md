@@ -33,8 +33,10 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
   <img alt="print desktop do projeto" src="./img/desktop.jpg" width="100%">
   <img alt="print mobile do projeto" src="./img/mobile.jpg" width="50%">
 
-  <img alt="print da barra de pesquisa selecionada" src="./img/lupa-esq.jpg" width="50%">
-  <br>
+  <p> Barra de pesquisa selecionada </p>  
+  <img alt="print da barra de pesquisa selecionada" src="./img/lupa-esq.jpg" width="50%">  
+  <br>  
+  <p> Detalhe do Tooltip </p>  
   <img alt="print do tooltip" src="./img/tooltip.jpg" width="50%">
 </p>
 

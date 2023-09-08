@@ -35,14 +35,24 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 480px) {
   .sidebar {
     display: none;
   }
 
-  .video-container, .filtros{
+  .filtros{
     width: 100%;
-    margin-left: 5px;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+
+  }
+
+  .video-container {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0;
   }
 
   .video {

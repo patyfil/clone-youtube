@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 10px;
   background: #ffffff;
 }
@@ -331,6 +331,9 @@ svg.sidebar-svg {
   height: 24px;
 }
 
+
+
+
 .links:hover,
 .links.active, 
 .mais-youtube a:hover,
@@ -534,15 +537,35 @@ p.nome-canal, p.video-views {
 .small-sidebar {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  gap: 20px;
   position: fixed;
   top: 70px;
   left: 0;
   width: 70px;
-  padding: 12px;
+  overflow: hidden;
 }
 
-.small-sidebar a p  {
-  display: none;
+.small-sidebar a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  flex-wrap: wrap;
+  text-align: center; /* Centralize o texto */
+  height: 60px;
+}
+
+.small-sidebar p {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  max-height: 14px;
+  padding-bottom: 20px;
 }
 
 .esconde-outros-icones {

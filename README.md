@@ -33,7 +33,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
   <img alt="print desktop do projeto" src="./img/desktop.jpg" width="100%">
 
   <p align="center"> <br> Menu fechado: </p>
-  <img align="center" alt="print menu fechado" src="./img/menu-sand.jpg" width="50%">
+  <img align="center" alt="print menu fechado" src="./img/menu-sand.jpg" width="20%">
 
   <p align="center"> <br> Mobile: </p>
   <img align="center" alt="print mobile do projeto" src="./img/mobile.jpg" width="30%">

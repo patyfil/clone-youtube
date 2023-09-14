@@ -22,7 +22,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-É uma cópia da interface principal do YouTube. Falta fazer a responsividade
+É uma cópia da interface principal do YouTube.
 
 - [Visite o projeto online](https://patyfil.github.io/clone-youtube/)
 
